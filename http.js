@@ -17,10 +17,6 @@ app.get('/', function(req, res) {
     res.send("Ping");
 });
 
-app.get('/ajax', function(req, res) {
-    res.sendfile("httpTester.html");
-});
-
 app.get('/xhr', function(req, res) {
     res.sendfile("xhrTester.html");
 });

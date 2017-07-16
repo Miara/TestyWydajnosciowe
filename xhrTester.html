@@ -15,13 +15,17 @@
 <script src="/socket.io/socket.io.js"></script>
 <script>
     //var MESSAGE_COUNT_PARAMS = [1, 5, 10, 50, 100, 200, 500, 1, 1, 1];
-    var MESSAGE_COUNT_PARAMS = [1, 5, 10, 50, 100];
+    //var MESSAGE_COUNT_PARAMS = [1, 5, 10, 50, 100];
+    var MESSAGE_COUNT_PARAMS = [1, 2, 5, 10, 25, 50, 75, 100, 150, 200];
     var ITERATION_NUMBER = 10;
     var iterationValue = 0;
-    var last = 100;
+    var last = 200;
     //var serverAddress = "http://localhost:3000";
     //var serverAddress = "http://ec2-35-156-202-28.eu-central-1.compute.amazonaws.com:8080";
-    var serverAddress = "http://ec2-52-91-218-54.compute-1.amazonaws.com:8080";
+    //var serverAddress = "http://ec2-52-91-218-54.compute-1.amazonaws.com:8080";
+    var serverAddress = "http://ec2-35-176-249-2.eu-west-2.compute.amazonaws.com:8080";
+
+
     //"http://192.168.1.138:3000";
     var currentTest = 0;
     var messagesSent = 0;
