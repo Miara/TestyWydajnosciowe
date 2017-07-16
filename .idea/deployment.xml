@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="AWS UnitedStates">
+    <serverData>
+      <paths name="AWS Frankfurt">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/ubuntu/Testy" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="AWS UnitedStates">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/ubuntu/Testy" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>

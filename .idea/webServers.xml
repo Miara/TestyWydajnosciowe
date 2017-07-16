@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="fa363967-0913-4236-8bf5-444ac97885bc" name="AWS Frankfurt" url="http://ec2-35-156-202-28.eu-central-1.compute.amazonaws.com">
+        <fileTransfer host="ec2-35-156-202-28.eu-central-1.compute.amazonaws.com" port="22" privateKey="$PROJECT_DIR$/../key-pair.pem" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="6c01a741-4ae6-46a1-999b-959c49926a37" name="AWS UnitedStates" url="http://ec2-52-91-218-54.compute-1.amazonaws.com">
+        <fileTransfer host="ec2-52-91-218-54.compute-1.amazonaws.com" port="22" privateKey="$PROJECT_DIR$/../another_key_pair.pem" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

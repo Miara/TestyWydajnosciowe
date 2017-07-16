@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head><title>Hello world</title></head>
+<script src="/socket.io/socket.io.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+    var MESSAGE_COUNT_PARAMS = [1, 5, 10, 50, 100, 250, 500, 750, 1000];
+    var ITERATION_NUMBER = 10;
+    var iterationValue = 0;
+    var last = 1000;
+
+    //var serverAddress = "http://ec2-35-156-202-28.eu-central-1.compute.amazonaws.com:8080";
+    var serverAddress = "http://ec2-52-91-218-54.compute-1.amazonaws.com:8080";
+    //"http://192.168.1.138:8080";
+    var currentTest = 0;
+    var messagesSent = 0;
+    var messagesRead = 0;
+    var timeStart;
+    var tr ;
+    var init = false;
+
+
+    var testSocket = function(msgNumber) {
+
+        var socket = io.connect(serverAddress); 
+        socket.on('newmsg', function (data) {
+            messagesRead++;
+            if(messagesRead == msgNumber){
+                var timeCheck = performance.now();
+                var timeElapsed = (timeCheck - timeStart);
+                socket.disconnect();
+                messagesRead = 0;
+                messagesSent = 0;
+                tr += '<td>' +  timeElapsed.toPrecision(4) + '</td>';
+                nextTest();
+
+                if(msgNumber == last) {
+                    tr += '</tr>';
+                    document.getElementById('message-container').innerHTML += tr;
+                    currentTest = 0;
+                    iterationValue ++;
+                    if(iterationValue < 10) {
+                        tr = '<tr>';
+                        testSocket(1);
+                    }else{
+                        tr = '';
+                        iterationValue = 0;
+                    }
+
+                }
+            }
+
+        });
+
+        timeStart = performance.now();
+        for (var i = 0; i < msgNumber; i++) {
+            messagesSent++;
+            socket.emit('msg', {});
+        }
+
+    };
+
+    var nextTest = function(){
+        currentTest++;
+        if(currentTest < MESSAGE_COUNT_PARAMS.length) {
+            var msgNumber = MESSAGE_COUNT_PARAMS[currentTest];
+            testSocket(msgNumber);
+        }
+
+    };
+
+    function test(){
+        if(!init) {
+            var header = '<tr>';
+            for (var i = 0; i < MESSAGE_COUNT_PARAMS.length; i++) {
+                header += '<td>' + MESSAGE_COUNT_PARAMS[i] + ' msg' + '</td>';
+            }
+            header += '</tr>';
+            document.getElementById('message-container').innerHTML += header;
+            init = true;
+        }
+        tr = '<tr>';
+        testSocket(1);
+    }
+
+</script>
+<body>
+<button type="button" name="button" onclick="test()">Make Intensive Websocket Tests</button>
+<table class="table table-striped" id="message-container">
+
+</table>
+</body>
+</html>
