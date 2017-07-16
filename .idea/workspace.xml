@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cdff5f95-aa4c-4a59-91cf-f14dda334718" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socketTester.html" afterPath="$PROJECT_DIR$/socketTester.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xhrTester.html" afterPath="$PROJECT_DIR$/xhrTester.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -44,8 +43,8 @@
       <file leaf-file-name="xhrTester.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xhrTester.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="100" selection-end-column="122" />
+            <state relative-caret-position="262">
+              <caret line="18" column="60" lean-forward="false" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -54,7 +53,7 @@
       <file leaf-file-name="socketTester.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/socketTester.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="738">
+            <state relative-caret-position="1710">
               <caret line="95" column="122" lean-forward="false" selection-start-line="95" selection-start-column="122" selection-end-line="95" selection-end-column="122" />
               <folding />
             </state>
@@ -96,8 +95,8 @@
         <option value="$PROJECT_DIR$/socket.js" />
         <option value="$PROJECT_DIR$/httpTester.html" />
         <option value="$PROJECT_DIR$/http.js" />
-        <option value="$PROJECT_DIR$/xhrTester.html" />
         <option value="$PROJECT_DIR$/socketTester.html" />
+        <option value="$PROJECT_DIR$/xhrTester.html" />
       </list>
     </option>
   </component>
@@ -292,7 +291,7 @@
       <updated>1499578454936</updated>
       <workItem from="1499578459935" duration="16417000" />
       <workItem from="1499867553761" duration="7936000" />
-      <workItem from="1500156190206" duration="5806000" />
+      <workItem from="1500156190206" duration="6018000" />
     </task>
     <task id="LOCAL-00001" summary="London version from 1 to 200">
       <created>1500221978209</created>
@@ -315,11 +314,18 @@
       <option name="project" value="LOCAL" />
       <updated>1500225197850</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Version from 1 - 100 changed servers">
+      <created>1500225857492</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1500225857492</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30159000" />
+    <option name="totallyTimeSpent" value="30371000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-11" width="1922" height="1092" extended-state="6" />
@@ -353,7 +359,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="London version from 1 to 200" />
     <MESSAGE value="Version from 1 to 100" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version from 1 to 100" />
+    <MESSAGE value="Version from 1 - 100 changed servers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version from 1 - 100 changed servers" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -490,15 +497,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/xhrTester.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="100" selection-end-column="122" />
+        <state relative-caret-position="262">
+          <caret line="18" column="60" lean-forward="false" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/socketTester.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
+        <state relative-caret-position="1710">
           <caret line="95" column="122" lean-forward="false" selection-start-line="95" selection-start-column="122" selection-end-line="95" selection-end-column="122" />
           <folding />
         </state>
