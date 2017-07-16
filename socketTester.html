@@ -10,16 +10,12 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script>
-    var MESSAGE_COUNT_PARAMS = [1, 2, 5, 10, 25, 50, 75, 100, 150, 200];
+    var MESSAGE_COUNT_PARAMS = [1, 2, 5, 10, 25, 50, 75, 100];
     var ITERATION_NUMBER = 10;
     var iterationValue = 0;
-    var last = 200;
+    var last = 100;
 
-    //var serverAddress = "http://ec2-35-156-202-28.eu-central-1.compute.amazonaws.com:8080";
-    //var serverAddress = "http://ec2-52-91-218-54.compute-1.amazonaws.com:8080";
-
-    var serverAddress = "http://ec2-35-176-249-2.eu-west-2.compute.amazonaws.com:8080";
-    //"http://192.168.1.138:8080";
+    var serverAddress = "";
     var currentTest = 0;
     var messagesSent = 0;
     var messagesRead = 0;
@@ -77,7 +73,8 @@
 
     };
 
-    function test(){
+    function test(address){
+        serverAddress = address;
         if(!init) {
             var header = '<tr>';
             for (var i = 0; i < MESSAGE_COUNT_PARAMS.length; i++) {
@@ -93,7 +90,10 @@
 
 </script>
 <body>
-<button type="button" name="button" onclick="test()">Make Intensive Websocket Tests</button>
+<button type="button" name="button" onclick="test('http://192.168.1.138:8080')">Local network</button>
+<button type="button" name="button" onclick="test('http://ec2-35-156-202-28.eu-central-1.compute.amazonaws.com:8080')">Frankfurt</button>
+<button type="button" name="button" onclick="test('http://ec2-35-176-249-2.eu-west-2.compute.amazonaws.com:8080')">London</button>
+<button type="button" name="button" onclick="test('http://ec2-52-91-218-54.compute-1.amazonaws.com:8080')">Virginia(US)</button>
 <table class="table table-striped" id="message-container">
 
 </table>
